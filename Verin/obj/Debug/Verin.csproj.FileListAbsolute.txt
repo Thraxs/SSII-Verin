@@ -1,0 +1,11 @@
+c:\users\javi\documents\visual studio 2012\Projects\Verin\Verin\bin\Debug\Verin.exe.config
+c:\users\javi\documents\visual studio 2012\Projects\Verin\Verin\bin\Debug\Verin.exe
+c:\users\javi\documents\visual studio 2012\Projects\Verin\Verin\bin\Debug\Verin.pdb
+c:\users\javi\documents\visual studio 2012\Projects\Verin\Verin\obj\Debug\Verin.csprojResolveAssemblyReference.cache
+c:\users\javi\documents\visual studio 2012\Projects\Verin\Verin\obj\Debug\Verin.Properties.Resources.resources
+c:\users\javi\documents\visual studio 2012\Projects\Verin\Verin\obj\Debug\Verin.csproj.GenerateResource.Cache
+c:\users\javi\documents\visual studio 2012\Projects\Verin\Verin\obj\Debug\Verin.exe
+c:\users\javi\documents\visual studio 2012\Projects\Verin\Verin\obj\Debug\Verin.pdb
+C:\Users\JAVI\Documents\Visual Studio 2013\Projects\Verin\Verin\bin\Debug\Verin.exe.config
+C:\Users\JAVI\Documents\Visual Studio 2013\Projects\Verin\Verin\obj\Debug\Verin.exe
+C:\Users\JAVI\Documents\Visual Studio 2013\Projects\Verin\Verin\obj\Debug\Verin.pdb
