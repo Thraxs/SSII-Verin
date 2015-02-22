@@ -12,8 +12,11 @@ C:\Users\JAVI\Documents\Visual Studio 2013\Projects\Verin\Verin\obj\Debug\Verin.
 C:\Users\Javier\Documents\GitHub\SSII-Verin\Verin\bin\Debug\Verin.exe.config
 C:\Users\Javier\Documents\GitHub\SSII-Verin\Verin\bin\Debug\Verin.exe
 C:\Users\Javier\Documents\GitHub\SSII-Verin\Verin\bin\Debug\Verin.pdb
-C:\Users\Javier\Documents\GitHub\SSII-Verin\Verin\obj\Debug\Verin.csprojResolveAssemblyReference.cache
+C:\Users\Javier\Documents\GitHub\SSII-Verin\Verin\bin\Debug\es-ES\Verin.resources.dll
 C:\Users\Javier\Documents\GitHub\SSII-Verin\Verin\obj\Debug\Verin.Properties.Resources.resources
+C:\Users\Javier\Documents\GitHub\SSII-Verin\Verin\obj\Debug\Verin.Form1.resources
+C:\Users\Javier\Documents\GitHub\SSII-Verin\Verin\obj\Debug\Verin.Form1.es-ES.resources
 C:\Users\Javier\Documents\GitHub\SSII-Verin\Verin\obj\Debug\Verin.csproj.GenerateResource.Cache
+C:\Users\Javier\Documents\GitHub\SSII-Verin\Verin\obj\Debug\es-ES\Verin.resources.dll
 C:\Users\Javier\Documents\GitHub\SSII-Verin\Verin\obj\Debug\Verin.exe
 C:\Users\Javier\Documents\GitHub\SSII-Verin\Verin\obj\Debug\Verin.pdb

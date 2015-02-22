@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace Verin
 {
-    static class Crypto
+    static class Cryptography
     {
-        public static String getHash(FileStream stream, HashType hashType)
+        public static string getHash(FileStream stream, HashType hashType)
         {
-            String hexHash;
+            string hexHash;
 
             switch (hashType)
             {
@@ -42,9 +42,9 @@ namespace Verin
             return hexHash;
         }
 
-        private static String getMD5Hash(FileStream stream)
+        private static string getMD5Hash(FileStream stream)
         {
-            String hexHash;
+            string hexHash;
 
             using (MD5 md5hash = MD5.Create())
             {
@@ -56,9 +56,9 @@ namespace Verin
             return hexHash;
         }
 
-        private static String getRIPEMD160Hash(FileStream stream)
+        private static string getRIPEMD160Hash(FileStream stream)
         {
-            String hexHash;
+            string hexHash;
 
             using (RIPEMD160 ripemd160hash = RIPEMD160.Create())
             {
@@ -70,9 +70,9 @@ namespace Verin
             return hexHash;
         }
 
-        private static String getSHA1Hash(FileStream stream)
+        private static string getSHA1Hash(FileStream stream)
         {
-            String hexHash;
+            string hexHash;
 
             using (SHA1 sha1hash = SHA1.Create())
             {
@@ -84,9 +84,9 @@ namespace Verin
             return hexHash;
         }
 
-        private static String getSHA256Hash(FileStream stream)
+        private static string getSHA256Hash(FileStream stream)
         {
-            String hexHash;
+            string hexHash;
 
             using (SHA256 sha256hash = SHA256.Create())
             {
@@ -98,9 +98,9 @@ namespace Verin
             return hexHash;
         }
 
-        private static String getSHA384Hash(FileStream stream)
+        private static string getSHA384Hash(FileStream stream)
         {
-            String hexHash;
+            string hexHash;
 
             using (SHA384 sha384hash = SHA384.Create())
             {
@@ -112,9 +112,9 @@ namespace Verin
             return hexHash;
         }
 
-        private static String getSHA512Hash(FileStream stream)
+        private static string getSHA512Hash(FileStream stream)
         {
-            String hexHash;
+            string hexHash;
 
             using (SHA512 sha512hash = SHA512.Create())
             {
@@ -126,7 +126,7 @@ namespace Verin
             return hexHash;
         }
 
-        private static String hashToString(byte[] rawHash)
+        private static string hashToString(byte[] rawHash)
         {
             StringBuilder stringbuilder = new StringBuilder();
 
