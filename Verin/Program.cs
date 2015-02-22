@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.IO;
+
 namespace Verin
 {
     static class Program
@@ -19,7 +21,9 @@ namespace Verin
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
             */
-            Console.WriteLine(Crypto.getHash("Hello world"));
+            FileStream fs = File.OpenRead("C:\\Users\\Javier\\Downloads\\PersonImpl.java");
+            Console.WriteLine(Crypto.getHash(fs, HashType.MD5));
+            //Console.WriteLine(Crypto.getHash("Hello world"));
         }
     }
 }

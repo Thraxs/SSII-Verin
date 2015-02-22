@@ -8,7 +8,7 @@ namespace Verin
 {
     class Folder
     {
-        public enum HashType { MD5, RIPEMD160, SHA1, SHA256, SHA384, SHA512 };
+        
         private String name;
         private String path;
         private HashType hashType;

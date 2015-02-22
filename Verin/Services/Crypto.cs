@@ -10,21 +10,39 @@ namespace Verin
 {
     static class Crypto
     {
-        public static String getHash(FileStream stream, Folder.HashType hashType)
+        public static String getHash(FileStream stream, HashType hashType)
         {
             String hexHash;
 
             switch (hashType)
             {
-                case Folder.HashType.MD5:
-                {
-
-                }
-
+                case HashType.MD5:
+                    hexHash = getMD5Hash(stream);
+                    break;
+                case HashType.RIPEMD160:
+                    hexHash = getRIPEMD160Hash(stream);
+                    break;
+                case HashType.SHA1:
+                    hexHash = getSHA1Hash(stream);
+                    break;
+                case HashType.SHA256:
+                    hexHash = getSHA256Hash(stream);
+                    break;
+                case HashType.SHA384:
+                    hexHash = getSHA384Hash(stream);
+                    break;
+                case HashType.SHA512:
+                    hexHash = getSHA512Hash(stream);
+                    break;
+                default:
+                    hexHash = getMD5Hash(stream);
+                    break;
             }
+
+            return hexHash;
         }
 
-        public static String getMD5Hash(FileStream stream)
+        private static String getMD5Hash(FileStream stream)
         {
             String hexHash;
 
@@ -38,7 +56,7 @@ namespace Verin
             return hexHash;
         }
 
-        public static String getRIPEMD160Hash(FileStream stream)
+        private static String getRIPEMD160Hash(FileStream stream)
         {
             String hexHash;
 
@@ -52,7 +70,7 @@ namespace Verin
             return hexHash;
         }
 
-        public static String getSHA1Hash(FileStream stream)
+        private static String getSHA1Hash(FileStream stream)
         {
             String hexHash;
 
@@ -66,7 +84,7 @@ namespace Verin
             return hexHash;
         }
 
-        public static String getSHA256Hash(FileStream stream)
+        private static String getSHA256Hash(FileStream stream)
         {
             String hexHash;
 
@@ -80,7 +98,7 @@ namespace Verin
             return hexHash;
         }
 
-        public static String getSHA384Hash(FileStream stream)
+        private static String getSHA384Hash(FileStream stream)
         {
             String hexHash;
 
@@ -94,7 +112,7 @@ namespace Verin
             return hexHash;
         }
 
-        public static String getSHA512Hash(FileStream stream)
+        private static String getSHA512Hash(FileStream stream)
         {
             String hexHash;
 
