@@ -43,16 +43,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.combo_hashAlgorithm = new System.Windows.Forms.ComboBox();
+            this.progressBar_hashing = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // combo_language
             // 
-            resources.ApplyResources(this.combo_language, "combo_language");
             this.combo_language.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combo_language.FormattingEnabled = true;
             this.combo_language.Items.AddRange(new object[] {
             resources.GetString("combo_language.Items"),
             resources.GetString("combo_language.Items1")});
+            resources.ApplyResources(this.combo_language, "combo_language");
             this.combo_language.Name = "combo_language";
             this.combo_language.SelectedIndexChanged += new System.EventHandler(this.combo_language_SelectedIndexChanged);
             // 
@@ -63,13 +64,12 @@
             // 
             // list_folders
             // 
-            resources.ApplyResources(this.list_folders, "list_folders");
             this.list_folders.FormattingEnabled = true;
+            resources.ApplyResources(this.list_folders, "list_folders");
             this.list_folders.Name = "list_folders";
             // 
             // listView1
             // 
-            resources.ApplyResources(this.listView1, "listView1");
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
@@ -77,6 +77,7 @@
             this.columnHeader4});
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
+            resources.ApplyResources(this.listView1, "listView1");
             this.listView1.Name = "listView1";
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -127,7 +128,6 @@
             // 
             // combo_hashAlgorithm
             // 
-            resources.ApplyResources(this.combo_hashAlgorithm, "combo_hashAlgorithm");
             this.combo_hashAlgorithm.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combo_hashAlgorithm.FormattingEnabled = true;
             this.combo_hashAlgorithm.Items.AddRange(new object[] {
@@ -137,12 +137,19 @@
             resources.GetString("combo_hashAlgorithm.Items3"),
             resources.GetString("combo_hashAlgorithm.Items4"),
             resources.GetString("combo_hashAlgorithm.Items5")});
+            resources.ApplyResources(this.combo_hashAlgorithm, "combo_hashAlgorithm");
             this.combo_hashAlgorithm.Name = "combo_hashAlgorithm";
+            // 
+            // progressBar_hashing
+            // 
+            resources.ApplyResources(this.progressBar_hashing, "progressBar_hashing");
+            this.progressBar_hashing.Name = "progressBar_hashing";
             // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.progressBar_hashing);
             this.Controls.Add(this.combo_hashAlgorithm);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -177,6 +184,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox combo_hashAlgorithm;
+        private System.Windows.Forms.ProgressBar progressBar_hashing;
 
 
 

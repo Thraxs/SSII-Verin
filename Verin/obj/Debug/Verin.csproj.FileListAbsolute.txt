@@ -20,3 +20,4 @@ C:\Users\Javier\Documents\GitHub\SSII-Verin\Verin\obj\Debug\Verin.csproj.Generat
 C:\Users\Javier\Documents\GitHub\SSII-Verin\Verin\obj\Debug\es-ES\Verin.resources.dll
 C:\Users\Javier\Documents\GitHub\SSII-Verin\Verin\obj\Debug\Verin.exe
 C:\Users\Javier\Documents\GitHub\SSII-Verin\Verin\obj\Debug\Verin.pdb
+C:\Users\Javier\Documents\GitHub\SSII-Verin\Verin\obj\Debug\Verin.csprojResolveAssemblyReference.cache

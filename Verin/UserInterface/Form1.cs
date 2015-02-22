@@ -15,6 +15,8 @@ namespace Verin
 {
     public partial class Form1 : Form
     {
+        public static int currentLanguage;
+
         public Form1()
         {
             InitializeComponent();
@@ -24,8 +26,9 @@ namespace Verin
 
         private void combo_language_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string[] codes = new string[] { "en", "es-ES" };
+            string[] codes = new string[] { "en-US", "es-ES" };
             string code = codes[combo_language.SelectedIndex];
+            currentLanguage = combo_language.SelectedIndex;
 
             ComponentResourceManager resources = new ComponentResourceManager(typeof(Form1));
             CultureInfo language = new CultureInfo(code);
@@ -52,7 +55,54 @@ namespace Verin
                 Folder folder = new Folder(path, (HashType)combo_hashAlgorithm.SelectedIndex);
                 list_folders.Items.Add(folder.path);
                 folder.readFiles();
+                showFiles(folder);
             }
+        }
+
+        private void showFiles(Folder folder)
+        {
+            List<File> files = folder.files;
+            progressBar_hashing.Maximum = files.Count;
+            progressBar_hashing.Value = 0;
+            foreach (File file in files)
+            {
+                file.computeBaseHash();
+                file.computeLatestHash();
+                addFileRow(file);
+            }
+        }
+
+        private void addFileRow(File file)
+        {
+            Color rowColor;
+            String status;
+            switch (file.status)
+            {
+                case FileStatus.GOOD:
+                    rowColor = Color.LightGreen;
+                    status = new string[] { "GOOD", "BUENO" }[currentLanguage];     //TODO: Better translation method
+                    break;
+                case FileStatus.MISMATCH:
+                    rowColor = Color.LightYellow;
+                    status = new string[] { "MISMATCH", "DIFERENTE" }[currentLanguage];
+                    break;
+                case FileStatus.DELETED:
+                    rowColor = Color.Red;
+                    status = new string[] { "DELETED", "BORRADO" }[currentLanguage];
+                    break;
+                case FileStatus.NEW:
+                    rowColor = Color.LightBlue;
+                    status = new string[] { "NEW", "Nuevo" }[currentLanguage];
+                    break;
+                default:
+                    rowColor = Color.LightYellow;
+                    status = new string[] { "MISMATCH", "DIFERENTE" }[currentLanguage];
+                    break;
+            }
+            string[] data = new string[] { file.getName(), file.baseHash, file.latestHash, status };
+            ListViewItem item = new ListViewItem(data);
+            item.BackColor = rowColor;
+            listView1.Items.Add(item);
         }
     }
 }
