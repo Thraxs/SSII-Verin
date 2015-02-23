@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace Verin
 {
+    public enum FileStatus { GOOD, MISMATCH, DELETED, NEW };
+
     class File
     {
         public Folder folder { get; set; }

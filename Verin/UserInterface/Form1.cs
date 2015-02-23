@@ -21,7 +21,9 @@ namespace Verin
         {
             InitializeComponent();
             combo_language.SelectedIndex = 0;
+            combo_periodicity.SelectedIndex = 0;
             combo_hashAlgorithm.SelectedIndex = 0;
+            Threads.init();
         }
 
         private void combo_language_SelectedIndexChanged(object sender, EventArgs e)
@@ -34,6 +36,16 @@ namespace Verin
             CultureInfo language = new CultureInfo(code);
 
             foreach (Control c in this.Controls)
+            {
+                resources.ApplyResources(c, c.Name, language);
+            }
+
+            foreach (Control c in this.groupBox1.Controls)
+            {
+                resources.ApplyResources(c, c.Name, language);
+            }
+
+            foreach (Control c in this.groupBox2.Controls)
             {
                 resources.ApplyResources(c, c.Name, language);
             }
@@ -52,7 +64,7 @@ namespace Verin
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 path = dialog.SelectedPath;
-                Folder folder = new Folder(path, (HashType)combo_hashAlgorithm.SelectedIndex);
+                Folder folder = new Folder(path, (HashType)combo_hashAlgorithm.SelectedIndex, (Periodicity)combo_periodicity.SelectedIndex);
                 list_folders.Items.Add(folder.path);
                 folder.readFiles();
                 showFiles(folder);

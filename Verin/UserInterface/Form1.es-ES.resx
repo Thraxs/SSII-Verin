@@ -142,11 +142,8 @@
   <data name="label2.Text" xml:space="preserve">
     <value>Carpetas</value>
   </data>
-  <data name="button_add.Text" xml:space="preserve">
-    <value>Añadir</value>
-  </data>
   <data name="button_remove.Text" xml:space="preserve">
-    <value>Borrar</value>
+    <value>Borrar seleccionada</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 13</value>
@@ -154,11 +151,40 @@
   <data name="label3.Text" xml:space="preserve">
     <value>Archivos</value>
   </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Carpeta actual</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Nueva carpeta</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 13</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
     <value>Algoritmo hash:</value>
+  </data>
+  <data name="button_add.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_add.Text" xml:space="preserve">
+    <value>Añadir carpeta</value>
+  </data>
+  <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 13</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Periodicidad: </value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

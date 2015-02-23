@@ -38,12 +38,17 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label2 = new System.Windows.Forms.Label();
-            this.button_add = new System.Windows.Forms.Button();
             this.button_remove = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.combo_hashAlgorithm = new System.Windows.Forms.ComboBox();
             this.progressBar_hashing = new System.Windows.Forms.ProgressBar();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button_add = new System.Windows.Forms.Button();
+            this.combo_hashAlgorithm = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.combo_periodicity = new System.Windows.Forms.ComboBox();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // combo_language
@@ -103,13 +108,6 @@
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
             // 
-            // button_add
-            // 
-            resources.ApplyResources(this.button_add, "button_add");
-            this.button_add.Name = "button_add";
-            this.button_add.UseVisualStyleBackColor = true;
-            this.button_add.Click += new System.EventHandler(this.button_add_Click);
-            // 
             // button_remove
             // 
             resources.ApplyResources(this.button_remove, "button_remove");
@@ -121,10 +119,39 @@
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
             // 
+            // progressBar_hashing
+            // 
+            resources.ApplyResources(this.progressBar_hashing, "progressBar_hashing");
+            this.progressBar_hashing.Name = "progressBar_hashing";
+            // 
+            // groupBox1
+            // 
+            resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.TabStop = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.button_add);
+            this.groupBox2.Controls.Add(this.combo_hashAlgorithm);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.combo_periodicity);
+            resources.ApplyResources(this.groupBox2, "groupBox2");
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.TabStop = false;
+            // 
             // label4
             // 
             resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
+            // 
+            // button_add
+            // 
+            resources.ApplyResources(this.button_add, "button_add");
+            this.button_add.Name = "button_add";
+            this.button_add.UseVisualStyleBackColor = true;
+            this.button_add.Click += new System.EventHandler(this.button_add_Click);
             // 
             // combo_hashAlgorithm
             // 
@@ -140,21 +167,35 @@
             resources.ApplyResources(this.combo_hashAlgorithm, "combo_hashAlgorithm");
             this.combo_hashAlgorithm.Name = "combo_hashAlgorithm";
             // 
-            // progressBar_hashing
+            // label5
             // 
-            resources.ApplyResources(this.progressBar_hashing, "progressBar_hashing");
-            this.progressBar_hashing.Name = "progressBar_hashing";
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            // 
+            // combo_periodicity
+            // 
+            this.combo_periodicity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo_periodicity.FormattingEnabled = true;
+            this.combo_periodicity.Items.AddRange(new object[] {
+            resources.GetString("combo_periodicity.Items"),
+            resources.GetString("combo_periodicity.Items1"),
+            resources.GetString("combo_periodicity.Items2"),
+            resources.GetString("combo_periodicity.Items3"),
+            resources.GetString("combo_periodicity.Items4"),
+            resources.GetString("combo_periodicity.Items5"),
+            resources.GetString("combo_periodicity.Items6")});
+            resources.ApplyResources(this.combo_periodicity, "combo_periodicity");
+            this.combo_periodicity.Name = "combo_periodicity";
             // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.progressBar_hashing);
-            this.Controls.Add(this.combo_hashAlgorithm);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button_remove);
-            this.Controls.Add(this.button_add);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.list_folders);
@@ -163,6 +204,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,16 +218,20 @@
         private System.Windows.Forms.ListBox list_folders;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button_add;
         private System.Windows.Forms.Button button_remove;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox combo_hashAlgorithm;
         private System.Windows.Forms.ProgressBar progressBar_hashing;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button_add;
+        private System.Windows.Forms.ComboBox combo_hashAlgorithm;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox combo_periodicity;
 
 
 
