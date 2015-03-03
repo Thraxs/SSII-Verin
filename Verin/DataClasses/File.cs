@@ -134,7 +134,6 @@ namespace Verin
 
         public bool isLastFileToHash()
         {
-            Console.WriteLine("islast?..." + (this.folder.hashingProgress == this.folder.files.Count));
             return this.folder.hashingProgress == this.folder.files.Count;
         }
 
