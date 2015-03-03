@@ -53,9 +53,12 @@
   <ItemGroup>
     <Compile Include="DataClasses\HashTask.cs" />
     <Compile Include="DataClasses\TaskManager.cs" />
+    <Compile Include="DataClasses\TimeManager.cs" />
     <Compile Include="Services\Cryptography.cs" />
     <Compile Include="DataClasses\File.cs" />
     <Compile Include="DataClasses\Folder.cs" />
+    <Compile Include="Services\Folders.cs" />
+    <Compile Include="Services\Logger.cs" />
     <Compile Include="Services\Threads.cs" />
     <Compile Include="UserInterface\Form1.cs">
       <SubType>Form</SubType>

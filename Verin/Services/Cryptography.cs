@@ -42,6 +42,38 @@ namespace Verin
             return hexHash;
         }
 
+        public static int getHashLength(HashType hashType)
+        {
+            int length = 0;
+
+            switch (hashType)
+            {
+                case HashType.MD5:
+                    length = 32;
+                    break;
+                case HashType.RIPEMD160:
+                    length = 40;
+                    break;
+                case HashType.SHA1:
+                    length = 40;
+                    break;
+                case HashType.SHA256:
+                    length = 64;
+                    break;
+                case HashType.SHA384:
+                    length = 96;
+                    break;
+                case HashType.SHA512:
+                    length = 128;
+                    break;
+                default:
+                    length = 32;
+                    break;
+            }
+
+            return length;
+        } 
+
         private static string getMD5Hash(FileStream stream)
         {
             string hexHash;

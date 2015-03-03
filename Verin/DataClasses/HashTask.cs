@@ -12,12 +12,13 @@ namespace Verin
     {
         public File file { get; set; }
         public TaskType type { get; set; }
-        public string result { get; set; }
+        public bool backgroundTask { get; set; }
 
-        public HashTask(File file, TaskType type)
+        public HashTask(File file, TaskType type, bool backgroundTask)
         {
             this.file = file;
             this.type = type;
+            this.backgroundTask = backgroundTask;
         }
 
         public void execute()
@@ -25,12 +26,10 @@ namespace Verin
             if (type == TaskType.BASEHASH)
             {
                 file.computeBaseHash();
-                result = file.baseHash;
             }
             else
             {
                 file.computeLatestHash();
-                result = file.latestHash;
             }
 
             Threads.endTask(this);

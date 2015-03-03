@@ -14,8 +14,7 @@ namespace Verin
             {
                 if (Threads.activeThreads < Threads.parallelThreads)
                 {
-                    Threads.activeThreads++;
-                    Threads.runTask(Threads.tasks[0]);
+                    Threads.runTask();
                 }
             }
         }

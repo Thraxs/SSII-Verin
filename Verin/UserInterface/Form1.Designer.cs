@@ -42,12 +42,21 @@
             this.label3 = new System.Windows.Forms.Label();
             this.progressBar_hashing = new System.Windows.Forms.ProgressBar();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox_status = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox_periodicity = new System.Windows.Forms.TextBox();
+            this.textBox_hashAlgorithm = new System.Windows.Forms.TextBox();
+            this.button_computeHashes = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button_browseLogs = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button_add = new System.Windows.Forms.Button();
             this.combo_hashAlgorithm = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.combo_periodicity = new System.Windows.Forms.ComboBox();
+            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,6 +81,7 @@
             this.list_folders.FormattingEnabled = true;
             resources.ApplyResources(this.list_folders, "list_folders");
             this.list_folders.Name = "list_folders";
+            this.list_folders.SelectedIndexChanged += new System.EventHandler(this.list_folders_SelectedIndexChanged);
             // 
             // listView1
             // 
@@ -82,6 +92,7 @@
             this.columnHeader4});
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
+            this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             resources.ApplyResources(this.listView1, "listView1");
             this.listView1.Name = "listView1";
             this.listView1.UseCompatibleStateImageBehavior = false;
@@ -113,6 +124,7 @@
             resources.ApplyResources(this.button_remove, "button_remove");
             this.button_remove.Name = "button_remove";
             this.button_remove.UseVisualStyleBackColor = true;
+            this.button_remove.Click += new System.EventHandler(this.button_remove_Click);
             // 
             // label3
             // 
@@ -123,12 +135,67 @@
             // 
             resources.ApplyResources(this.progressBar_hashing, "progressBar_hashing");
             this.progressBar_hashing.Name = "progressBar_hashing";
+            this.progressBar_hashing.Step = 1;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox_status);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.textBox_periodicity);
+            this.groupBox1.Controls.Add(this.textBox_hashAlgorithm);
+            this.groupBox1.Controls.Add(this.button_computeHashes);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
+            // 
+            // textBox_status
+            // 
+            resources.ApplyResources(this.textBox_status, "textBox_status");
+            this.textBox_status.Name = "textBox_status";
+            this.textBox_status.ReadOnly = true;
+            // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
+            // 
+            // textBox_periodicity
+            // 
+            resources.ApplyResources(this.textBox_periodicity, "textBox_periodicity");
+            this.textBox_periodicity.Name = "textBox_periodicity";
+            this.textBox_periodicity.ReadOnly = true;
+            // 
+            // textBox_hashAlgorithm
+            // 
+            resources.ApplyResources(this.textBox_hashAlgorithm, "textBox_hashAlgorithm");
+            this.textBox_hashAlgorithm.Name = "textBox_hashAlgorithm";
+            this.textBox_hashAlgorithm.ReadOnly = true;
+            // 
+            // button_computeHashes
+            // 
+            resources.ApplyResources(this.button_computeHashes, "button_computeHashes");
+            this.button_computeHashes.Name = "button_computeHashes";
+            this.button_computeHashes.UseVisualStyleBackColor = true;
+            this.button_computeHashes.Click += new System.EventHandler(this.button_computeHashes_Click);
+            // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.Name = "label7";
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            // 
+            // button_browseLogs
+            // 
+            resources.ApplyResources(this.button_browseLogs, "button_browseLogs");
+            this.button_browseLogs.Name = "button_browseLogs";
+            this.button_browseLogs.UseVisualStyleBackColor = true;
+            this.button_browseLogs.Click += new System.EventHandler(this.button_browseLogs_Click);
             // 
             // groupBox2
             // 
@@ -194,6 +261,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.progressBar_hashing);
+            this.Controls.Add(this.button_browseLogs);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button_remove);
             this.Controls.Add(this.label2);
@@ -204,6 +272,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -224,7 +295,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ProgressBar progressBar_hashing;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label4;
@@ -232,6 +302,15 @@
         private System.Windows.Forms.ComboBox combo_hashAlgorithm;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox combo_periodicity;
+        private System.Windows.Forms.TextBox textBox_periodicity;
+        private System.Windows.Forms.TextBox textBox_hashAlgorithm;
+        private System.Windows.Forms.Button button_browseLogs;
+        private System.Windows.Forms.Button button_computeHashes;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        internal System.Windows.Forms.ProgressBar progressBar_hashing;
+        private System.Windows.Forms.TextBox textBox_status;
+        private System.Windows.Forms.Label label8;
 
 
 
